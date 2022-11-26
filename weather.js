@@ -1,11 +1,4 @@
 const API_KEY = 'ef80ae5ff07cd275020bf50d476a290d';
-
-const countyName = document.getElementById('search-country').value;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Bangladesh&appid=${API_KEY}&units=metric`)
-    .then(res => res.json())
-    .then(data => displayTempData(data)); 
-
-
 const loadWeatherData = () => {
     const countyName = document.getElementById('search-country').value;
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${countyName}&appid=${API_KEY}&units=metric`)
